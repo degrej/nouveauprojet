@@ -12,6 +12,16 @@
 				echo htmlspecialchars($_POST['prenom']); 
 				// permet de récupérer le prénom de la page d'avant. récupération de ce qui est dans le name du form
 			?>
-		</p>        
+		</p>
+        <?php
+            if (isset($_POST['contact']))
+            {
+                echo '<p>Vous avez accepté d\'être contacter par notre site, et nous vous en remercions.</p>';
+            }
+            else
+            {
+                echo '<p>Vous n\'avez pas accepté d\'être contacter par notre site, quel dommage.</p>';
+            }
+        ?>
     </body>
 </html>
